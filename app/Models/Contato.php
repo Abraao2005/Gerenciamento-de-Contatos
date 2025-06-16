@@ -11,5 +11,11 @@ class Contato extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $table = "contato";
+    protected $table = "contatos";
+
+    protected $fillable = [
+        "nome",
+        "contato",
+        "email"
+    ];
 }
