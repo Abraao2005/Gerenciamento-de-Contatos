@@ -14,6 +14,11 @@
                 </ul>
             </div>
         @endif
+        @if (session('error'))
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                {{ session('error') }}
+            </div>
+        @endif
         <form method="POST" action="{{ isset($contato) ? route('contatos.update', $contato) : route('contatos.store') }}"
             class="space-y-6">
             @csrf
